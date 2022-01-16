@@ -9,7 +9,7 @@ app.config['MONGO_DBNAME'] = 'login_infodb'
 app.config['MONGO_URI'] = 'mongodb://afraz:afraz@cluster0-shard-00-00.zrkia.mongodb.net:27017,cluster0-shard-00-01.zrkia.mongodb.net:27017,cluster0-shard-00-02.zrkia.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-a7707y-shard-0&authSource=admin&retryWrites=true&w=majority'
 mongo=PyMongo(app)
 
-@app.route('/', methods=['GET','POST'])
+@app.route('/')
 def index():
     if 'username' in session: 
         return "You have logged in as " + session['username']
